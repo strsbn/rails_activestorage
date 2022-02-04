@@ -66,8 +66,8 @@ GEM
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 14.0)
     aws-eventstream (1.2.0)
-    aws-partitions (1.547.0)
-    aws-sdk-core (3.125.3)
+    aws-partitions (1.551.0)
+    aws-sdk-core (3.125.6)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
@@ -75,7 +75,7 @@ GEM
     aws-sdk-kms (1.53.0)
       aws-sdk-core (~> 3, >= 3.125.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.46.0)
+    aws-sdk-s3 (1.48.0)
       aws-sdk-core (~> 3, >= 3.61.1)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
@@ -249,6 +249,7 @@ GEM
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
       semantic_range (>= 2.3.0)
+    webrick (1.7.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -261,7 +262,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
-  aws-sdk-s3
+  aws-sdk-s3 (= 1.48)
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
@@ -286,6 +287,7 @@ DEPENDENCIES
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
+  webrick (~> 1.7)
 
 RUBY VERSION
    ruby 3.0.3p157
