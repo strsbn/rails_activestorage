@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def index
-    # @page = Page.new
     @page = Page.all
   end
 
@@ -9,11 +8,7 @@ class PagesController < ApplicationController
   end
 
   def create
-    page = Page.create!(page_params)
-    # binding.pry
-    # @page = Page.find_by(id: page_params[:id])
-    # @page.image.attache(page_params[:image])
-    # @page.save
+    Page.create!(page_params)
     redirect_to root_path
   end
 
