@@ -3,10 +3,6 @@ class PagesController < ApplicationController
     @page = Page.all
   end
 
-  def show
-
-  end
-
   def create
     Page.create!(page_params)
     redirect_to root_path

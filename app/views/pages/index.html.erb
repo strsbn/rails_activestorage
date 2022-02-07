@@ -2,9 +2,6 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_with model: @page, method: :post, url: pages_path, local: true do |f| %>
 
-      <%= f.label :id %>
-      <%= f.text_field :id, class: 'form-control' %>
-
       <%= f.label :image %>
       <%= f.file_field :image, class: 'form-control' %>
 
@@ -12,8 +9,10 @@
     <% end %>
   </div>
   <div class="col-md-6 col-md-offset-3">
-    <% @page.each do | page | %>
-      <img src ="https://shibano-test.s3.ap-northeast-1.amazonaws.com/<%= page.image.key if page.image.attached? %>">
+    <% @page.each do |page| %>
+      <% if page.image.attached? %>
+        <img src="https://shibano-test.s3.ap-northeast-1.amazonaws.com/<%= page.image.key %>">
+      <% end %>
     <% end %>
   </div>
 </div>
